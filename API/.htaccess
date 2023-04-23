@@ -1,0 +1,9 @@
+#guarda este archivo como .htaccess para que pueda funcionar las url
+Options All -Indexes
+#Option -MultiViews
+
+RewriteEngine on
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]   #ruta principal de la api

@@ -1,0 +1,10 @@
+#guarda este archivo como .htaccess para que pueda funcionar las url
+Options All -Indexes
+#Option -MultiViews
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]   #ruta principal del proyecto
+#RewriteRule ^ index.php [QSA,L]   #ruta principal del proyecto
